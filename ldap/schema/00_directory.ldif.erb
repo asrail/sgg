@@ -1,0 +1,15 @@
+<% if environment == 'development' %>
+dn: dc=nodomain
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+o: My organization
+dc: nodomain
+
+dn: cn=admin,dc=nodomain
+objectClass: simpleSecurityObject
+objectClass: organizationalRole
+cn: admin
+description: LDAP administrator
+userPassword: {crypt}<%= config['password'].crypt(config['password']) %>
+<% end %>

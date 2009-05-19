@@ -1,0 +1,9 @@
+<h1>Groups</h1>
+
+<ul>
+  <% for group in @groups %>
+    <li><%= group.cn %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'New Group', :action => 'new' %>

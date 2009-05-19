@@ -1,0 +1,21 @@
+development:
+  host: 127.0.0.1
+  port: 9009
+  base: dc=development,dc=nodomain
+  bind_dn: cn=admin,dc=nodomain
+  password: teste
+
+test:
+  host: 127.0.0.1
+  port: 9009
+  base: dc=test,dc=nodomain
+  bind_dn: cn=admin,dc=nodomain
+  password: teste
+
+production:
+  host: 127.0.0.1
+  port: 9009
+  method: :tls
+  base: dc=production,dc=nodomain
+  bind_dn: cn=admin,dc=nodomain
+  password: teste

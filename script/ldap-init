@@ -1,0 +1,25 @@
+#!/usr/bin/ruby
+
+require 'yaml'
+require 'erb'
+require 'fileutils'
+
+environment = ENV['RAILS_ENV'] || 'development'
+config = YAML.load_file(File.dirname(__FILE__) + '/../config/ldap.yml')[environment]
+
+files = ARGV
+if files.empty?
+  files = Dir.glob(File.dirname(__FILE__) + '/../ldap/schema/*.ldif.erb').sort
+end
+
+files.each do |file|
+  done_file = file + '.' + environment + '.done'
+  if File.exists?(done_file)
+    puts "I: skipping done step #{file}"
+  else
+    slapdadd = IO.popen('/usr/sbin/slapadd -v -f config/slapd.conf', 'w')
+    slapdadd.write(ERB.new(File.read(file)).result(binding))
+    slapdadd.close
+    FileUtils.touch(done_file)
+  end
+end

@@ -1,0 +1,7 @@
+#!/usr/bin/ruby
+
+DEBUG_LEVEL = 8 + 32 + 64
+
+slapd_conf = File.dirname(__FILE__) + '/../config/slapd.conf'
+
+system("/usr/sbin/slapd -d #{DEBUG_LEVEL} -f #{slapd_conf} -h ldap://127.0.0.1:9009/")
