@@ -30,7 +30,7 @@ Rails::Initializer.run do |config|
   
   config.gem "locale"
   config.gem "gettext"
-  config.gem "activeldap"
+  config.gem "activeldap", :lib => "active_ldap"
   config.gem "ruby-net-ldap", :lib => "net/ldap"
 
   # Only load the plugins named here, in the order given. By default, all plugins 
