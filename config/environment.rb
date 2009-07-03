@@ -28,7 +28,7 @@ Rails::Initializer.run do |config|
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
   
-  config.gem "xml-simple"
+  config.gem "xml-simple", :lib => "xmlsimple"
   config.gem "locale"
   config.gem "gettext"
   config.gem "activeldap", :lib => "active_ldap"
