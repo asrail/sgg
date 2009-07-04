@@ -11,6 +11,8 @@ class GroupsController < ApplicationController
       @group = Group.new(params[:group])
       if @group.save
         redirect_to :action => 'index'
+      else
+        flash[:notice] = "<p>Ocorreu um erro ao salvar.<br>Por favor, tente novamente.</p>"
       end
     end
   end
