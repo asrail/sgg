@@ -1,0 +1,9 @@
+div.notice
+{
+  border: 3px solid black;
+  background-color: #fa9;
+  color: black;
+  width: 18em;
+  padding: 0.51em 0.5em 0.5em 2em;
+  margin-bottom: 2em;
+}
