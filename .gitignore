@@ -3,3 +3,4 @@
 *.rej
 .svn
 *.bak
+*.done
