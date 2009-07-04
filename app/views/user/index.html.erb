@@ -1,0 +1,11 @@
+<h1>Usuário</h1>
+
+<% if @users.empty? -%>
+<b>Nenhum usuário encontrado</b>
+<% else -%>
+    <ul>
+    <% @users.each do |user| -%>
+        <li><b><%= user[0] %>:</b>  <%= user[1] %></li>
+    <% end -%>
+    </ul>
+<% end -%>
