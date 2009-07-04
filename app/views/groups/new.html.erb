@@ -1,3 +1,7 @@
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
 <% form_for :group do |f| %>
   Name:
   <%= f.text_field :cn %>
