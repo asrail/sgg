@@ -20,4 +20,15 @@ class GroupsController < ApplicationController
       end
     end
   end
+  def show
+    if params[:id]
+      @group = Group.find(:filter => {:cn => params[:id]})
+      if @group.nil?
+        flash[:notice] = "<p>Grupo não existente.</p>"
+        redirect_to :action => "index"
+      end
+    else
+      redirect_to :action => "index"
+    end    
+  end
 end

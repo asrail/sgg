@@ -2,7 +2,7 @@
 
 <ul>
   <% for group in @groups %>
-    <li><%= group.cn %></li>
+    <li><%= link_to group.cn, {:action => 'show', :id => group} %></li>
   <% end %>
 </ul>
 
