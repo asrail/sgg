@@ -1,0 +1,30 @@
+<h1><%= @group.cn %></h1>
+
+<% if @group.memberUid.nil? -%>
+<p>Nenhum membro</p>
+<% else -%>
+Lista de membros:
+<ul>
+  <% for user in @group.memberUid %>
+    <li><%= user %></li>
+  <% end %>
+</ul>
+<% end -%>
+
+<p>Incluir membro:</p>
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+  
+<% form_for :user, :url => {:action => 'add_member', :group => @group} do |u| -%>
+  <fieldset>
+  <div class='form-element'>
+    <label for="user">Usuário</label>
+      <%= u.text_field :uid %>
+  </div>
+        <div class='form-element'>
+                <%= submit_tag 'Adicionar membro' %>
+        </div>
+  </fieldset>
+<% end -%>
