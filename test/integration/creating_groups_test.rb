@@ -1,29 +1,31 @@
 require 'test_helper'
 
-class CreatingGroupsTest < ActionController::IntegrationTest
+class CreatingGroupsTest < Test::Unit::TestCase
   #fixtures :all
 
-  test "creating a group" do
-    get '/'
-    assert_tag :tag => 'a', :attributes => { :href => '/groups' }
+  #test "loggin" do
+    #get '/'
+    #assert_tag :tag => 'a', :attributes => { :href => '/login' }
 
-    get '/groups'
-    assert_tag :tag => 'a', :attributes => { :href => '/groups/new' }
+    #get '/login'
+    #assert_tag :tag => 'form', :attributes => { :action => 'login', :method => 'post' }
 
-    get '/groups/new'
-    assert_tag :tag => 'form', :attributes => { :action => "/groups/new", :method => 'post' }
+    #post '/login', :login => { :name => "raoni", :password => "blibli" }
+    #assert_redirected_to '/groups'
 
-    post '/groups/new', :group => { :cn => "My new group", :gidNumber => 1111 }
-    assert_redirected_to '/groups'
+    #get '/groups/new'
+    #assert_tag :tag => 'form', :attributes => { :action => "/groups/new", :method => 'post' }
 
-    follow_redirect!
-    assert_tag :content => 'My new group'
-  end
+    #post '/groups/new', :group => { :cn => "My new group", :gidNumber => 1111 }
+    #assert_redirected_to '/groups'
+
+    #follow_redirect!
+    #assert_tag :content => 'My new group'
+  #end
   
-  test 'must not be able to create a group with an existing name'
 
-  def teardown
-    Group.destroy_all
-  end
+  #def teardown
+   # Group.destroy_all
+  #end
 
 end
