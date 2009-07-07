@@ -53,5 +53,6 @@ class GroupsController < ApplicationController
     redirect_to :back
   rescue Net::LDAP::LdapError
     flash[:notice] = "<p>Por favor, informe um nome válido de usuário.</p>"
+    redirect_to :back
   end
 end
