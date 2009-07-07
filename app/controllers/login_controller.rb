@@ -1,5 +1,7 @@
 class LoginController < ApplicationController
   skip_before_filter :authenticate
+  def index
+  end
 
   def login
     if session[:person] = User.authenticate(params[:login][:name], params[:login][:password])
@@ -8,8 +10,7 @@ class LoginController < ApplicationController
         redirect_to(session[:return_to])
         session[:return_to] = nil
       else
-        #XXXasrail: testar com :back
-        #redirect_to :controller => "default"
+        redirect_to :controller => "groups"
       end
     else
       flash[:notice] = "Senha ou usuário incorretos"
@@ -19,6 +20,6 @@ class LoginController < ApplicationController
   
   def logout
     session[:person] = nil
-    redirect_to :action => index
+    redirect_to :action => "index"
   end
 end
