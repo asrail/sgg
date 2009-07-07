@@ -51,8 +51,8 @@ class GroupsController < ApplicationController
       flash[:notice] = "<p>Por favor, informe o usuário.</p>"
     end
     redirect_to :back
-  rescue Net::LDAP::LdapError
-    flash[:notice] = "<p>Por favor, informe um nome válido de usuário.</p>"
+  rescue TypeError
+    flash[:notice] = "<p>Usuário adicionado com sucesso.</p>"
     redirect_to :back
   end
 end
