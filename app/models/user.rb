@@ -20,4 +20,13 @@ class User < ActiveLdap::Base
   rescue ActiveLdap::AuthenticationError, ActiveLdap::LdapError::UnwillingToPerform
     false
   end
+  
+  def marshal_load(str)
+    load(str)
+  end
+  
+  def marshal_dump
+    dump
+  end
+  
 end
