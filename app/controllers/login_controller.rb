@@ -16,4 +16,9 @@ class LoginController < ApplicationController
       redirect_to :action => "index"
     end
   end
+  
+  def logout
+    session[:person] = nil
+    redirect_to :action => index
+  end
 end
