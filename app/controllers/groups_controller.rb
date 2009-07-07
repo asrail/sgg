@@ -40,7 +40,7 @@ class GroupsController < ApplicationController
       elsif user.groups.member?@group
         flash[:notice] = "<p>Usuário não existente.</p>"
       else
-        group.members << user
+        group.members << [user]
         if user.groups.member?group
           flash[:notice] = "<p>Usuário adicionado com sucesso.</p>"
         else
@@ -49,6 +49,9 @@ class GroupsController < ApplicationController
       end
     else
       flash[:notice] = "<p>Por favor, informe o usuário.</p>"
-    end        
+    end
+    redirect_to :back
+  rescue Net::LDAP::LdapError
+    flash[:notice] = "<p>Por favor, informe um nome válido de usuário.</p>"
   end
 end
