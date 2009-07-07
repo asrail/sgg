@@ -7,7 +7,7 @@ class UserTest < Test::Unit::TestCase
   end
 
   def test_creating_a_user
-    u = User.new({:uid => 'raoni', :userPassword => 'blibli', :sn => 'Boaventura', :cn => 'Raoni Boaventura'})
+    u = Group.new({:uid => 'raoni', :userPassword => 'blibli', :sn => 'Boaventura', :cn => 'Raoni Boaventura'})
     assert_equal 'raoni', u.uid
     assert_equal 'blibli', u.userPassword
     assert_equal 'Boaventura', u.sn
