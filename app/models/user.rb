@@ -9,6 +9,8 @@ class User < ActiveLdap::Base
   def self.authenticate(username, password)
     return false if username.empty? or password.empty?
     find(username).authenticated?(password)
+  rescue ActiveLdap::EntryNotFound
+    return false
   end
 
   def authenticated?(password)
