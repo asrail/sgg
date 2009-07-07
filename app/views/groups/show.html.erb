@@ -1,0 +1,12 @@
+<h1><%= @group.cn %></h1>
+
+<% if @group.memberUid.nil? -%>
+<p>Nenhum membro</p>
+<% else -%>
+Lista de membros:
+<ul>
+  <% for user in @group.memberUid %>
+    <li><%= user %></li>
+  <% end %>
+</ul>
+<% end -%>
