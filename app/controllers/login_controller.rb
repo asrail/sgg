@@ -1,10 +1,8 @@
 class LoginController < ApplicationController
   skip_before_filter :authenticate
-  def index
-  end
 
   def login
-    if session[:person] = LdapUser.authenticate(params[:login][:name], params[:login][:password])
+    if session[:person] = User.authenticate(params[:login][:name], params[:login][:password])
       session[:username] = params[:login][:name]
       if session[:return_to]
         redirect_to(session[:return_to])
