@@ -12,4 +12,8 @@ class GroupTest < Test::Unit::TestCase
     assert_equal 2, g.gidNumber
   end
 
+  def test_truth 
+    assert true 
+  end 
+
 end
