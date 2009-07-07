@@ -13,7 +13,7 @@ class LoginController < ApplicationController
         redirect_to :controller => "groups"
       end
     else
-      flash[:notice] = "Senha ou usuário incorretos"
+      flash[:notice] = "<p>Senha ou usuário incorretos</p>"
       redirect_to :action => "index"
     end
   end
