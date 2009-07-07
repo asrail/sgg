@@ -5,7 +5,9 @@
 <% else -%>
     <ul>
     <% @users.each do |user| -%>
-        <li><b><%= user[0] %>:</b>  <%= user[1] %></li>
+        <li><b><%= user.uid %>:</b>  <%= user.cn %></li>
     <% end -%>
     </ul>
 <% end -%>
+
+<%= link_to 'New User', :action => 'new' %>
