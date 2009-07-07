@@ -27,4 +27,24 @@ class GroupsController < ApplicationController
       redirect_to :action => "index"
     end    
   end
+  def add_member
+    group = Group.find(params[:group])
+    if params[:user]
+      user = User.find(:filter => params[:user])
+      if user.nil?
+        flash[:notice] = "<p>Usuário não existente.</p>"
+      elsif user.groups.member?@group
+        flash[:notice] = "<p>Usuário não existente.</p>"
+      else
+        group.members << user
+        if user.groups.member?group
+          flash[:notice] = "<p>Usuário adicionado com sucesso.</p>"
+        else
+          flash[:notice] = "<p>Ocorreu um erro ao adicionar usuário.</p>"
+        end
+      end
+    else
+      flash[:notice] = "<p>Por favor, informe o usuário.</p>"
+    end        
+  end
 end
