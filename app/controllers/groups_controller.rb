@@ -37,8 +37,8 @@ class GroupsController < ApplicationController
       user = User.find(:filter => params[:user])
       if user.nil?
         flash[:notice] = "<p>Usuário não existente.</p>"
-      elsif user.groups.member?@group
-        flash[:notice] = "<p>Usuário não existente.</p>"
+      elsif user.groups.member?group
+        flash[:notice] = "<p>Usuário já pertence ao grupo.</p>"
       else
         group.members << [user]
         if user.groups.member?group
