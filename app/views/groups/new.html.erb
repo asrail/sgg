@@ -1,7 +1,7 @@
 <% if flash[:notice] %>
   <div class="notice"><%= flash[:notice] %></div>
 <% end %>
-
+<fieldset>
 <% form_for :group do |f| %>
   Name:
   <%= f.text_field :cn %>
@@ -11,3 +11,4 @@
   <br/>
   <%= submit_tag %>
 <% end %>
+</fieldset>

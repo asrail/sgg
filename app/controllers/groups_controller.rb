@@ -55,4 +55,7 @@ class GroupsController < ApplicationController
     flash[:notice] = "<p>Por favor, informe um nome válido de usuário.</p>"
     redirect_to :back
   end
+  def back
+    redirect_to :back
+  end
 end

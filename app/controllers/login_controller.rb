@@ -10,7 +10,7 @@ class LoginController < ApplicationController
         redirect_to(session[:return_to])
         session[:return_to] = nil
       else
-        redirect_to :controller => "groups"
+        redirect_to :controller => "welcome"
       end
     else
       flash[:notice] = "<p>Senha ou usuário incorretos</p>"
