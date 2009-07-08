@@ -41,18 +41,14 @@ class GroupsController < ApplicationController
         flash[:notice] = "<p>Usuário já pertence ao grupo.</p>"
       else
         group.members << [user]
-        if user.groups.member?group
-          flash[:notice] = "<p>Usuário adicionado com sucesso.</p>"
-        else
-          flash[:notice] = "<p>Ocorreu um erro ao adicionar usuário.</p>"
-        end
+        flash[:notice] = "<p>Usuário adicionado com sucesso.</p>"
       end
     else
       flash[:notice] = "<p>Por favor, informe o usuário.</p>"
     end
     redirect_to :back
   rescue TypeError
-    flash[:notice] = "<p>Usuário adicionado com sucesso.</p>"
+    flash[:notice] = "<p>Erro inesperado.</p>"
     redirect_to :back
   end
 end
