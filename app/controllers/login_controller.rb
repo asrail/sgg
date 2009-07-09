@@ -3,8 +3,15 @@ class LoginController < ApplicationController
   def index
   end
 
+  def authenticate(username, password)
+    return false if username.empty? or password.empty?
+    User.find(username).authenticated?(password)
+  rescue ActiveLdap::EntryNotFound
+    return false
+  end
+
   def login
-    if session[:person] = User.authenticate(params[:login][:name], params[:login][:password])
+    if session[:person] = authenticate(params[:login][:name], params[:login][:password])
       session[:username] = params[:login][:name]
       if session[:return_to]
         redirect_to(session[:return_to])

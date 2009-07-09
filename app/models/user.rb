@@ -6,13 +6,6 @@ class User < ActiveLdap::Base
     self.have_attribute?("dn")
   end
 
-  def self.authenticate(username, password)
-    return false if username.empty? or password.empty?
-    find(username).authenticated?(password)
-  rescue ActiveLdap::EntryNotFound
-    return false
-  end
-
   def authenticated?(password)
     bind(password)
     remove_connection
