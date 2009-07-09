@@ -5,8 +5,11 @@ class LoginController < ApplicationController
 
   def authenticate(username, password)
     return false if username.empty? or password.empty?
-    User.find(username).authenticated?(password)
-  rescue ActiveLdap::EntryNotFound
+    user = User.find(username)
+    user.bind(password)
+    user.remove_connection
+    return true
+  rescue ActiveLdap::EntryNotFound, ActiveLdap::AuthenticationError, ActiveLdap::LdapError::UnwillingToPerform
     return false
   end
 
