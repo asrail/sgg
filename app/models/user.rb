@@ -5,14 +5,6 @@ class User < ActiveLdap::Base
   def empty
     self.have_attribute?("dn")
   end
-
-  def authenticated?(password)
-    bind(password)
-    remove_connection
-    true
-  rescue ActiveLdap::AuthenticationError, ActiveLdap::LdapError::UnwillingToPerform
-    false
-  end
   
   def marshal_load(str)
     load(str)
