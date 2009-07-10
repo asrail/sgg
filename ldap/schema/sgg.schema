@@ -1,0 +1,11 @@
+
+attributetype ( 77.3.6.1.1.1.1.12 NAME 'coordinatorUid'
+	EQUALITY caseExactIA5Match
+	SUBSTR caseExactIA5SubstringsMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 )
+
+
+objectclass ( 77.3.6.1.1.1.2.2 NAME 'sggGroup'
+	DESC 'Abstraction of a group with a coordinator'
+	SUP posixGroup STRUCTURAL
+	MAY ( coordinatorUid ) )
