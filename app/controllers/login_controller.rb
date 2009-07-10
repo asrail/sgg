@@ -3,18 +3,8 @@ class LoginController < ApplicationController
   def index
   end
 
-  def authenticate(username, password)
-    return false if username.empty? or password.empty?
-    user = User.find(username)
-    user.bind(password)
-    user.remove_connection
-    return true
-  rescue ActiveLdap::EntryNotFound, ActiveLdap::AuthenticationError, ActiveLdap::LdapError::UnwillingToPerform
-    return false
-  end
-
   def login
-    if session[:person] = authenticate(params[:login][:name], params[:login][:password])
+    if session[:person] = User.authenticate(params[:login][:name], params[:login][:password])
       session[:username] = params[:login][:name]
       if session[:return_to]
         redirect_to(session[:return_to])

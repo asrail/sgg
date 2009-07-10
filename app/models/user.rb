@@ -5,6 +5,15 @@ class User < ActiveLdap::Base
   def empty
     self.have_attribute?("dn")
   end
+
+  def self.authenticate(username, password)
+    return false if username.empty? or password.empty?
+    find(username).bind(password)
+    remove_connection
+    return true
+  rescue ActiveLdap::EntryNotFound, ActiveLdap::AuthenticationError, ActiveLdap::LdapError::UnwillingToPerform
+    return false
+  end
   
   def marshal_load(str)
     load(str)
