@@ -42,9 +42,11 @@ class GroupsController < ApplicationController
         flash[:notice] = "<p>Usuário não existente.</p>"
       elsif user.groups.member?group
         flash[:notice] = "<p>Usuário já pertence ao grupo.</p>"
-      else
+      elsif coordinator?(group, User.find(session[:username]))
         group.members << [user]
         flash[:notice] = "<p>Usuário adicionado com sucesso.</p>"
+      else
+        flash[:notice] = "<p>Você não possui permissão para adicionar usuários a este grupo</p>"
       end
     else
       flash[:notice] = "<p>Por favor, informe o usuário.</p>"
@@ -64,10 +66,10 @@ class GroupsController < ApplicationController
   end
 
   def coordinator?(group, user)
-    if group.kind_of?String && !group.empty?
+    if group.kind_of?String and !group.empty?
       group = Group.find(group)
     end
-    if user.kind_of?String && !user.empty?
+    if user.kind_of?String and !user.empty?
       user = User.find(user)
     end
 
