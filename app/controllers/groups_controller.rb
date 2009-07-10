@@ -64,6 +64,13 @@ class GroupsController < ApplicationController
   end
 
   def coordinator?(group, user)
+    if group.kind_of?String && !group.empty?
+      group = Group.find(group)
+    end
+    if user.kind_of?String && !user.empty?
+      user = User.find(user)
+    end
+
     return group.coordinators.member?user
   end
 
