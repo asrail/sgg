@@ -51,6 +51,13 @@ class GroupsController < ApplicationController
     flash[:notice] = "<p>Erro inesperado.</p>"
     redirect_to :back
   end
+  def add_coordinator
+    group = Group.find(params[:group])
+    user = User.find(params[:user])
+    group.coordinators << [user]
+    flash[:notice] = "<p>Coordenador adicionado com sucesso.</p>"
+    redirect_to :back
+  end
   def back
     redirect_to :back
   end
