@@ -42,7 +42,7 @@ class GroupsController < ApplicationController
         flash[:notice] = "<p>Usuário não existente.</p>"
       elsif user.groups.member?group
         flash[:notice] = "<p>Usuário já pertence ao grupo.</p>"
-      elsif coordinator?(group, User.find(session[:username]))
+      elsif group.coordinator?(User.find(session[:username]))
         group.members << [user]
         flash[:notice] = "<p>Usuário adicionado com sucesso.</p>"
       else
@@ -63,17 +63,6 @@ class GroupsController < ApplicationController
     group.coordinators << [user]
     flash[:notice] = "<p>Coordenador adicionado com sucesso.</p>"
     redirect_to :back
-  end
-
-  def coordinator?(group, user)
-    if group.kind_of?String and !group.empty?
-      group = Group.find(group)
-    end
-    if user.kind_of?String and !user.empty?
-      user = User.find(user)
-    end
-
-    return group.coordinators.member?user
   end
 
   def back

@@ -3,6 +3,14 @@ class Group < ActiveLdap::Base
   has_many :members, :class_name => "User", :wrap => "memberUid"
   has_many :coordinators, :class_name => "User", :wrap => "coordinatorUid"
 
+   def coordinator?(user)
+    if user.kind_of?String and !user.empty?
+      user = User.find(user)
+    end
+
+    return group.coordinators.member?user
+  end
+
   def marshal_load(str)
     load(str)
   end
