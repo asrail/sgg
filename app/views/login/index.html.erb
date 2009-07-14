@@ -1,18 +1,21 @@
+<div style="margin:auto;">
+<h1>Login:</h1>
 <% if flash[:notice] %>
   <div class="notice"><%= flash[:notice] %></div>
 <% end %>
 
   <%= form_tag :action => 'login' %>
-  <fieldset>
+  <fieldset style="width:200px;">
   <div class="form-element">
-    <label for="name">Usuário</label>
+    <label for="name">Usuário</label><br/>
     <%= text_field 'login', 'name' , {:class=>"text-input"} %>
   </div>
   <div class="form-element">
-    <label for="password">Senha</label>
+    <label for="password">Senha</label><br/>
     <%= password_field 'login', 'password' , {:class=>"text-input"} %>
   </div>
-        <div class="form-element">
+        <div class="form-element"><br/>
                 <%= submit_tag "Login" %>
         </div>
   </fieldset>
+</div>
