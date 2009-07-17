@@ -1,0 +1,252 @@
+# Logfile created on Tue Jul 07 00:06:23 -0300 2009You need ActiveLdap 1.1.0 or later
+Attempting to reconnect
+  [4;36;1mLDAP: connect (1.0ms)[0m: [0;1m{:uri=>"ldap://127.0.0.1:9009", :with_start_tls=>false}[0m
+  [4;35;1mLDAP: bind (1.6ms)[0m: [0m{:dn=>"cn=admin,dc=nodomain"}[0m
+Bound to ldap://127.0.0.1:9009 by simple as cn=admin,dc=nodomain
+  [4;35;1mLDAP: search (3.5ms)[0m: [0m{:attributes=>[], :filter=>"(&(cn=*)(&(objectClass=top)(objectClass=posixGroup)))", :base=>"ou=Groups,dc=test,dc=nodomain", :scope=>:sub}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(cn=*)(&(objectClass=top)(objectClass=posixGroup))): attributes: []
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+Attempting to reconnect
+  [4;36;1mLDAP: connect (1.3ms)[0m: [0;1m{:with_start_tls=>false, :uri=>"ldap://127.0.0.1:9009"}[0m
+  [4;35;1mLDAP: bind (1.5ms)[0m: [0m{:dn=>"cn=admin,dc=nodomain"}[0m
+Bound to ldap://127.0.0.1:9009 by simple as cn=admin,dc=nodomain
+  [4;35;1mLDAP: search (3.4ms)[0m: [0m{:attributes=>[], :scope=>:sub, :base=>"ou=Groups,dc=test,dc=nodomain", :filter=>"(&(cn=*)(&(objectClass=top)(objectClass=posixGroup)))"}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(cn=*)(&(objectClass=top)(objectClass=posixGroup))): attributes: []
+  [4;35;1mLDAP: search (3.4ms)[0m: [0m{:attributes=>[], :scope=>:sub, :base=>"ou=Groups,dc=test,dc=nodomain", :filter=>"(&(cn=*)(&(objectClass=top)(objectClass=posixGroup)))"}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(cn=*)(&(objectClass=top)(objectClass=posixGroup))): attributes: []
+You need ActiveLdap 1.1.0 or later
+Attempting to reconnect
+  [4;36;1mLDAP: connect (1.2ms)[0m: [0;1m{:uri=>"ldap://127.0.0.1:9009", :with_start_tls=>false}[0m
+  [4;35;1mLDAP: bind (2.8ms)[0m: [0m{:dn=>"cn=admin,dc=nodomain"}[0m
+Bound to ldap://127.0.0.1:9009 by simple as cn=admin,dc=nodomain
+  [4;35;1mLDAP: search (4.8ms)[0m: [0m{:attributes=>[], :filter=>"(&(cn=*)(&(objectClass=top)(objectClass=posixGroup)))", :base=>"ou=Groups,dc=test,dc=nodomain", :scope=>:sub}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(cn=*)(&(objectClass=top)(objectClass=posixGroup))): attributes: []
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+Attempting to reconnect
+  [4;36;1mLDAP: connect (0.8ms)[0m: [0;1m{:uri=>"ldap://127.0.0.1:9009", :with_start_tls=>false}[0m
+  [4;35;1mLDAP: bind (1.9ms)[0m: [0m{:dn=>"cn=admin,dc=nodomain"}[0m
+Bound to ldap://127.0.0.1:9009 by simple as cn=admin,dc=nodomain
+  [4;35;1mLDAP: search (5.8ms)[0m: [0m{:attributes=>[], :filter=>"(&(cn=*)(&(objectClass=top)(objectClass=posixGroup)))", :base=>"ou=Groups,dc=test,dc=nodomain", :scope=>:sub}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(cn=*)(&(objectClass=top)(objectClass=posixGroup))): attributes: []
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+Attempting to reconnect
+  [4;36;1mLDAP: connect (0.3ms)[0m: [0;1m{:with_start_tls=>false, :uri=>"ldap://127.0.0.1:9009"}[0m
+  [4;35;1mLDAP: bind (1.0ms)[0m: [0m{:dn=>"cn=admin,dc=nodomain"}[0m
+Bound to ldap://127.0.0.1:9009 by simple as cn=admin,dc=nodomain
+  [4;35;1mLDAP: search (1.9ms)[0m: [0m{:attributes=>[], :scope=>:sub, :base=>"ou=Groups,dc=test,dc=nodomain", :filter=>"(&(cn=*)(&(objectClass=top)(objectClass=posixGroup)))"}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(cn=*)(&(objectClass=top)(objectClass=posixGroup))): attributes: []
+You need ActiveLdap 1.1.0 or later
+Attempting to reconnect
+  [4;36;1mLDAP: connect (0.8ms)[0m: [0;1m{:uri=>"ldap://127.0.0.1:9009", :with_start_tls=>false}[0m
+  [4;35;1mLDAP: bind (2.4ms)[0m: [0m{:dn=>"cn=admin,dc=nodomain"}[0m
+Bound to ldap://127.0.0.1:9009 by simple as cn=admin,dc=nodomain
+  [4;35;1mLDAP: search (5.8ms)[0m: [0m{:attributes=>[], :filter=>"(&(cn=*)(&(objectClass=top)(objectClass=posixGroup)))", :base=>"ou=Groups,dc=test,dc=nodomain", :scope=>:sub}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(cn=*)(&(objectClass=top)(objectClass=posixGroup))): attributes: []
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+Attempting to reconnect
+  [4;36;1mLDAP: connect (0.4ms)[0m: [0;1m{:uri=>"ldap://127.0.0.1:9009", :with_start_tls=>false}[0m
+  [4;35;1mLDAP: bind (1.0ms)[0m: [0m{:dn=>"cn=admin,dc=nodomain"}[0m
+Bound to ldap://127.0.0.1:9009 by simple as cn=admin,dc=nodomain
+  [4;35;1mLDAP: search (2.1ms)[0m: [0m{:attributes=>[], :filter=>"(&(cn=*)(&(objectClass=top)(objectClass=posixGroup)))", :base=>"ou=Groups,dc=test,dc=nodomain", :scope=>:sub}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(cn=*)(&(objectClass=top)(objectClass=posixGroup))): attributes: []
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+Attempting to reconnect
+  [4;36;1mLDAP: connect (1.2ms)[0m: [0;1m{:with_start_tls=>false, :uri=>"ldap://127.0.0.1:9009"}[0m
+  [4;35;1mLDAP: bind (1.6ms)[0m: [0m{:dn=>"cn=admin,dc=nodomain"}[0m
+Bound to ldap://127.0.0.1:9009 by simple as cn=admin,dc=nodomain
+  [4;35;1mLDAP: search (3.5ms)[0m: [0m{:attributes=>[], :scope=>:sub, :base=>"ou=Groups,dc=test,dc=nodomain", :filter=>"(&(cn=*)(&(objectClass=top)(objectClass=posixGroup)))"}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(cn=*)(&(objectClass=top)(objectClass=posixGroup))): attributes: []
+You need ActiveLdap 1.1.0 or later
+Attempting to reconnect
+  [4;36;1mLDAP: connect (0.3ms)[0m: [0;1m{:uri=>"ldap://127.0.0.1:9009", :with_start_tls=>false}[0m
+  [4;35;1mLDAP: bind (0.9ms)[0m: [0m{:dn=>"cn=admin,dc=nodomain"}[0m
+Bound to ldap://127.0.0.1:9009 by simple as cn=admin,dc=nodomain
+  [4;35;1mLDAP: search (2.0ms)[0m: [0m{:attributes=>[], :filter=>"(&(cn=*)(&(objectClass=top)(objectClass=posixGroup)))", :base=>"ou=Groups,dc=test,dc=nodomain", :scope=>:sub}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(cn=*)(&(objectClass=top)(objectClass=posixGroup))): attributes: []
+You need ActiveLdap 1.1.0 or later
+Attempting to reconnect
+  [4;36;1mLDAP: connect (2.3ms)[0m: [0;1m{:uri=>"ldap://127.0.0.1:9009", :with_start_tls=>false}[0m
+  [4;35;1mLDAP: bind (3.9ms)[0m: [0m{:dn=>"cn=admin,dc=nodomain"}[0m
+Bound to ldap://127.0.0.1:9009 by simple as cn=admin,dc=nodomain
+  [4;35;1mLDAP: search (3.7ms)[0m: [0m{:attributes=>[], :filter=>"(&(cn=*)(&(objectClass=top)(objectClass=posixGroup)))", :base=>"ou=Groups,dc=test,dc=nodomain", :scope=>:sub}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(cn=*)(&(objectClass=top)(objectClass=posixGroup))): attributes: []
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+Attempting to reconnect
+  [4;36;1mLDAP: connect (1.2ms)[0m: [0;1m{:with_start_tls=>false, :uri=>"ldap://127.0.0.1:9009"}[0m
+  [4;35;1mLDAP: bind (3.8ms)[0m: [0m{:dn=>"cn=admin,dc=nodomain"}[0m
+Bound to ldap://127.0.0.1:9009 by simple as cn=admin,dc=nodomain
+  [4;35;1mLDAP: search (4.5ms)[0m: [0m{:attributes=>[], :scope=>:sub, :base=>"ou=Groups,dc=test,dc=nodomain", :filter=>"(&(cn=*)(&(objectClass=top)(objectClass=posixGroup)))"}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(cn=*)(&(objectClass=top)(objectClass=posixGroup))): attributes: []
+You need ActiveLdap 1.1.0 or later
+Attempting to reconnect
+  [4;36;1mLDAP: connect (1.3ms)[0m: [0;1m{:uri=>"ldap://127.0.0.1:9009", :with_start_tls=>false}[0m
+  [4;35;1mLDAP: bind (3.1ms)[0m: [0m{:dn=>"cn=admin,dc=nodomain"}[0m
+Bound to ldap://127.0.0.1:9009 by simple as cn=admin,dc=nodomain
+  [4;35;1mLDAP: search (5.5ms)[0m: [0m{:attributes=>[], :filter=>"(&(cn=*)(&(objectClass=top)(objectClass=posixGroup)))", :base=>"ou=Groups,dc=test,dc=nodomain", :scope=>:sub}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(cn=*)(&(objectClass=top)(objectClass=posixGroup))): attributes: []
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+Attempting to reconnect
+  [4;36;1mLDAP: connect (0.9ms)[0m: [0;1m{:uri=>"ldap://127.0.0.1:9009", :with_start_tls=>false}[0m
+  [4;35;1mLDAP: bind (1.2ms)[0m: [0m{:dn=>"cn=admin,dc=nodomain"}[0m
+Bound to ldap://127.0.0.1:9009 by simple as cn=admin,dc=nodomain
+  [4;35;1mLDAP: search (3.4ms)[0m: [0m{:attributes=>[], :scope=>:sub, :filter=>"(&(cn=*)(&(objectClass=top)(objectClass=posixGroup)))", :base=>"ou=Groups,dc=test,dc=nodomain"}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(cn=*)(&(objectClass=top)(objectClass=posixGroup))): attributes: []
+You need ActiveLdap 1.1.0 or later
+Attempting to reconnect
+  [4;36;1mLDAP: connect (0.3ms)[0m: [0;1m{:uri=>"ldap://127.0.0.1:9009", :with_start_tls=>false}[0m
+  [4;35;1mLDAP: bind (1.0ms)[0m: [0m{:dn=>"cn=admin,dc=nodomain"}[0m
+Bound to ldap://127.0.0.1:9009 by simple as cn=admin,dc=nodomain
+  [4;35;1mLDAP: search (2.0ms)[0m: [0m{:attributes=>[], :filter=>"(&(cn=*)(&(objectClass=top)(objectClass=posixGroup)))", :base=>"ou=Groups,dc=test,dc=nodomain", :scope=>:sub}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(cn=*)(&(objectClass=top)(objectClass=posixGroup))): attributes: []
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+Attempting to reconnect
+  [4;36;1mLDAP: connect (0.4ms)[0m: [0;1m{:uri=>"ldap://127.0.0.1:9009", :with_start_tls=>false}[0m
+  [4;35;1mLDAP: bind (1.0ms)[0m: [0m{:dn=>"cn=admin,dc=nodomain"}[0m
+Bound to ldap://127.0.0.1:9009 by simple as cn=admin,dc=nodomain
+  [4;35;1mLDAP: search (2.0ms)[0m: [0m{:attributes=>[], :filter=>"(&(cn=*)(&(objectClass=top)(objectClass=posixGroup)))", :base=>"ou=Groups,dc=test,dc=nodomain", :scope=>:sub}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(cn=*)(&(objectClass=top)(objectClass=posixGroup))): attributes: []
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+Attempting to reconnect
+  [4;36;1mLDAP: connect (0.3ms)[0m: [0;1m{:uri=>"ldap://127.0.0.1:9009", :with_start_tls=>false}[0m
+  [4;35;1mLDAP: bind (1.1ms)[0m: [0m{:dn=>"cn=admin,dc=nodomain"}[0m
+Bound to ldap://127.0.0.1:9009 by simple as cn=admin,dc=nodomain
+  [4;35;1mLDAP: search (2.1ms)[0m: [0m{:attributes=>[], :filter=>"(&(cn=*)(&(objectClass=top)(objectClass=posixGroup)))", :base=>"ou=Groups,dc=test,dc=nodomain", :scope=>:sub}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(cn=*)(&(objectClass=top)(objectClass=posixGroup))): attributes: []
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later
+Attempting to reconnect
+  [4;36;1mLDAP: connect (0.3ms)[0m: [0;1m{:uri=>"ldap://127.0.0.1:9009", :with_start_tls=>false}[0m
+  [4;35;1mLDAP: bind (0.9ms)[0m: [0m{:dn=>"cn=admin,dc=nodomain"}[0m
+Bound to ldap://127.0.0.1:9009 by simple as cn=admin,dc=nodomain
+  [4;35;1mLDAP: search (2.0ms)[0m: [0m{:filter=>"(&(cn=*)(&(objectClass=top)(objectClass=posixGroup)))", :scope=>:sub, :attributes=>[], :base=>"ou=Groups,dc=test,dc=nodomain"}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(cn=*)(&(objectClass=top)(objectClass=posixGroup))): attributes: []
+You need ActiveLdap 1.1.0 or later
+Attempting to reconnect
+  [4;36;1mLDAP: connect (0.4ms)[0m: [0;1m{:uri=>"ldap://127.0.0.1:9009", :with_start_tls=>false}[0m
+  [4;35;1mLDAP: bind (0.9ms)[0m: [0m{:dn=>"cn=admin,dc=nodomain"}[0m
+Bound to ldap://127.0.0.1:9009 by simple as cn=admin,dc=nodomain
+  [4;35;1mLDAP: search (2.1ms)[0m: [0m{:scope=>:base, :attributes=>["subschemaSubentry"], :base=>"", :filter=>"objectClass=*"}[0m
+  [4;35;1mLDAP: search (26.3ms)[0m: [0m{:scope=>:base, :attributes=>["objectClasses", "attributeTypes", "matchingRules", "matchingRuleUse", "dITStructureRules", "dITContentRules", "nameForms", "ldapSyntaxes"], :base=>"cn=Subschema", :filter=>"(objectClass=subschema)"}[0m
+  [4;35;1mLDAP: search (2.0ms)[0m: [0m{:scope=>:sub, :attributes=>[], :base=>"ou=Groups,dc=test,dc=nodomain", :filter=>"(&(cn=testgroup)(&(objectClass=top)(objectClass=posixGroup)))"}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(cn=testgroup)(&(objectClass=top)(objectClass=posixGroup))): attributes: []
+  [4;35;1mLDAP: search (1.9ms)[0m: [0m{:scope=>:base, :attributes=>[], :base=>"cn=testgroup,ou=Groups,dc=test,dc=nodomain", :filter=>"(&(cn=testgroup)(&(objectClass=top)(objectClass=posixGroup)))"}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(cn=testgroup)(&(objectClass=top)(objectClass=posixGroup))): attributes: []
+  [4;35;1mLDAP: add (1.1ms)[0m: [0m{:dn=>"cn=testgroup,ou=Groups,dc=test,dc=nodomain", :attributes=>{"cn"=>["testgroup"], "gidNumber"=>["11000"], "objectClass"=>["top", "posixGroup"]}}[0m
+  [4;35;1mLDAP: search (1.9ms)[0m: [0m{:scope=>:sub, :attributes=>[], :base=>"ou=Groups,dc=test,dc=nodomain", :filter=>"(&(cn=*)(&(objectClass=top)(objectClass=posixGroup)))"}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(cn=*)(&(objectClass=top)(objectClass=posixGroup))): attributes: []
+  [4;35;1mLDAP: search (1.9ms)[0m: [0m{:scope=>:sub, :attributes=>[], :base=>"ou=Groups,dc=test,dc=nodomain", :filter=>"(&(cn=*)(&(objectClass=top)(objectClass=posixGroup)))"}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(cn=*)(&(objectClass=top)(objectClass=posixGroup))): attributes: []
+You need ActiveLdap 1.1.0 or later
+Attempting to reconnect
+  [4;36;1mLDAP: connect (0.3ms)[0m: [0;1m{:uri=>"ldap://127.0.0.1:9009", :with_start_tls=>false}[0m
+  [4;35;1mLDAP: bind (1.0ms)[0m: [0m{:dn=>"cn=admin,dc=nodomain"}[0m
+Bound to ldap://127.0.0.1:9009 by simple as cn=admin,dc=nodomain
+  [4;35;1mLDAP: search (2.1ms)[0m: [0m{:scope=>:base, :attributes=>["subschemaSubentry"], :base=>"", :filter=>"objectClass=*"}[0m
+  [4;35;1mLDAP: search (29.6ms)[0m: [0m{:scope=>:base, :attributes=>["objectClasses", "attributeTypes", "matchingRules", "matchingRuleUse", "dITStructureRules", "dITContentRules", "nameForms", "ldapSyntaxes"], :base=>"cn=Subschema", :filter=>"(objectClass=subschema)"}[0m
+  [4;35;1mLDAP: search (2.0ms)[0m: [0m{:scope=>:sub, :attributes=>[], :base=>"ou=Groups,dc=test,dc=nodomain", :filter=>"(&(cn=*)(&(objectClass=top)(objectClass=posixGroup)))"}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(cn=*)(&(objectClass=top)(objectClass=posixGroup))): attributes: []
+  [4;35;1mLDAP: search (1.9ms)[0m: [0m{:scope=>:sub, :attributes=>[], :base=>"ou=Groups,dc=test,dc=nodomain", :filter=>"(&(cn=*)(&(objectClass=top)(objectClass=posixGroup)))"}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(cn=*)(&(objectClass=top)(objectClass=posixGroup))): attributes: []
+You need ActiveLdap 1.1.0 or later
+Attempting to reconnect
+  [4;36;1mLDAP: connect (0.4ms)[0m: [0;1m{:uri=>"ldap://127.0.0.1:9009", :with_start_tls=>false}[0m
+  [4;35;1mLDAP: bind (1.0ms)[0m: [0m{:dn=>"cn=admin,dc=nodomain"}[0m
+Bound to ldap://127.0.0.1:9009 by simple as cn=admin,dc=nodomain
+  [4;35;1mLDAP: search (2.1ms)[0m: [0m{:scope=>:base, :attributes=>["subschemaSubentry"], :base=>"", :filter=>"objectClass=*"}[0m
+  [4;35;1mLDAP: search (26.8ms)[0m: [0m{:scope=>:base, :attributes=>["objectClasses", "attributeTypes", "matchingRules", "matchingRuleUse", "dITStructureRules", "dITContentRules", "nameForms", "ldapSyntaxes"], :base=>"cn=Subschema", :filter=>"(objectClass=subschema)"}[0m
+  [4;35;1mLDAP: search (2.0ms)[0m: [0m{:scope=>:sub, :attributes=>[], :base=>"ou=Groups,dc=test,dc=nodomain", :filter=>"(&(cn=testgroup)(&(objectClass=top)(objectClass=posixGroup)))"}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(cn=testgroup)(&(objectClass=top)(objectClass=posixGroup))): attributes: []
+  [4;35;1mLDAP: search (1.9ms)[0m: [0m{:scope=>:base, :attributes=>[], :base=>"cn=testgroup,ou=Groups,dc=test,dc=nodomain", :filter=>"(&(cn=testgroup)(&(objectClass=top)(objectClass=posixGroup)))"}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(cn=testgroup)(&(objectClass=top)(objectClass=posixGroup))): attributes: []
+  [4;35;1mLDAP: add (1.1ms)[0m: [0m{:dn=>"cn=testgroup,ou=Groups,dc=test,dc=nodomain", :attributes=>{"cn"=>["testgroup"], "gidNumber"=>["2"], "objectClass"=>["top", "posixGroup"]}}[0m
+  [4;35;1mLDAP: search (1.9ms)[0m: [0m{:scope=>:sub, :attributes=>[], :base=>"ou=Groups,dc=test,dc=nodomain", :filter=>"(&(cn=*)(&(objectClass=top)(objectClass=posixGroup)))"}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(cn=*)(&(objectClass=top)(objectClass=posixGroup))): attributes: []
+  [4;35;1mLDAP: search (1.9ms)[0m: [0m{:scope=>:sub, :attributes=>[], :base=>"ou=Groups,dc=test,dc=nodomain", :filter=>"(&(cn=*)(&(objectClass=top)(objectClass=posixGroup)))"}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(cn=*)(&(objectClass=top)(objectClass=posixGroup))): attributes: []
+You need ActiveLdap 1.1.0 or later
+Attempting to reconnect
+  [4;36;1mLDAP: connect (0.3ms)[0m: [0;1m{:uri=>"ldap://127.0.0.1:9009", :with_start_tls=>false}[0m
+  [4;35;1mLDAP: bind (1.0ms)[0m: [0m{:dn=>"cn=admin,dc=nodomain"}[0m
+Bound to ldap://127.0.0.1:9009 by simple as cn=admin,dc=nodomain
+  [4;35;1mLDAP: search (2.1ms)[0m: [0m{:scope=>:base, :attributes=>["subschemaSubentry"], :base=>"", :filter=>"objectClass=*"}[0m
+  [4;35;1mLDAP: search (27.4ms)[0m: [0m{:scope=>:base, :attributes=>["objectClasses", "attributeTypes", "matchingRules", "matchingRuleUse", "dITStructureRules", "dITContentRules", "nameForms", "ldapSyntaxes"], :base=>"cn=Subschema", :filter=>"(objectClass=subschema)"}[0m
+  [4;35;1mLDAP: search (2.2ms)[0m: [0m{:scope=>:sub, :attributes=>[], :base=>"ou=Users,dc=test,dc=nodomain", :filter=>"(&(uid=*)(&(objectClass=top)(objectClass=person)(objectClass=shadowAccount)(objectClass=simpleSecurityObject)))"}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(uid=*)(&(objectClass=top)(objectClass=person)(objectClass=shadowAccount)(objectClass=simpleSecurityObject))): attributes: []
+You need ActiveLdap 1.1.0 or later
+Attempting to reconnect
+  [4;36;1mLDAP: connect (0.3ms)[0m: [0;1m{:uri=>"ldap://127.0.0.1:9009", :with_start_tls=>false}[0m
+  [4;35;1mLDAP: bind (1.1ms)[0m: [0m{:dn=>"cn=admin,dc=nodomain"}[0m
+Bound to ldap://127.0.0.1:9009 by simple as cn=admin,dc=nodomain
+  [4;35;1mLDAP: search (2.3ms)[0m: [0m{:scope=>:base, :attributes=>["subschemaSubentry"], :base=>"", :filter=>"objectClass=*"}[0m
+  [4;35;1mLDAP: search (29.7ms)[0m: [0m{:scope=>:base, :attributes=>["objectClasses", "attributeTypes", "matchingRules", "matchingRuleUse", "dITStructureRules", "dITContentRules", "nameForms", "ldapSyntaxes"], :base=>"cn=Subschema", :filter=>"(objectClass=subschema)"}[0m
+  [4;35;1mLDAP: search (2.0ms)[0m: [0m{:scope=>:sub, :attributes=>[], :base=>"ou=Groups,dc=test,dc=nodomain", :filter=>"(&(cn=*)(&(objectClass=top)(objectClass=posixGroup)))"}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(cn=*)(&(objectClass=top)(objectClass=posixGroup))): attributes: []
+  [4;35;1mLDAP: search (1.9ms)[0m: [0m{:scope=>:sub, :attributes=>[], :base=>"ou=Groups,dc=test,dc=nodomain", :filter=>"(&(cn=*)(&(objectClass=top)(objectClass=posixGroup)))"}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(cn=*)(&(objectClass=top)(objectClass=posixGroup))): attributes: []
+You need ActiveLdap 1.1.0 or later
+You need ActiveLdap 1.1.0 or later

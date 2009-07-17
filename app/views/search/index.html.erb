@@ -1,0 +1,26 @@
+<h1>Resultado da sua busca:</h1>
+
+<% if !(@users) %>
+<b>Sua busca não retornou nenhum usuário.</b>
+<% else -%>
+    <% if @users.class == User %>
+	<li><b><%= @users.uid %>:</b>  <%= @users.cn %></li>
+    <% else -%>
+	    <% @users.each do |user| -%>
+		<li><b><%= user.uid %>:</b>  <%= user.cn %></li>
+	    <% end -%>
+    <% end -%>
+<% end -%>
+<br/><br/><br/>
+<fieldset style="width:200px;" >
+<% form_for :search do |f| %>
+  Buscar:<br/>
+  <%= f.text_field :keyword %>
+  <%= f.select( :for, %w{ Name Surname }) %>
+  <br/> <br/>
+  <%= submit_tag 'Search' %>
+<% end %>
+</fieldset>
+
+<br><br>
+<%= link_to 'Back', :controller => 'welcome' %>

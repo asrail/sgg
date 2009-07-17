@@ -1,0 +1,9 @@
+dn: uid=raoni,ou=Users,dc=development,dc=nodomain
+uid: raoni
+objectClass: top
+objectClass: person
+objectClass: shadowAccount
+objectClass: simpleSecurityObject
+cn: Raoni Boaventura
+sn: Boaventura
+userPassword: blibli
