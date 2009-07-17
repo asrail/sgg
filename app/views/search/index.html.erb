@@ -4,10 +4,10 @@
 <b>Sua busca não retornou nenhum usuário.</b>
 <% else -%>
     <% if @users.class == User %>
-	<li><b><%= @users.uid %>:</b>  <%= @users.cn %></li>
+	<li><b><%= @users.cn %>&nbsp;<%= @users.sn %></b></li>
     <% else -%>
 	    <% @users.each do |user| -%>
-		<li><b><%= user.uid %>:</b>  <%= user.cn %></li>
+		<li><b><%= user.cn %>&nbsp;<%= user.sn %></b></li>
 	    <% end -%>
     <% end -%>
 <% end -%>

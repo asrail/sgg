@@ -8409,3 +8409,230 @@ Processing SearchController#index (for 127.0.0.1 at 2009-07-17 02:11:51) [POST]
 Rendering template within layouts/application
 Rendering search/index
 Completed in 31ms (View: 8, LDAP: 7, DB: 0) | 200 OK [http://127.0.0.1/search]
+You need ActiveLdap 1.1.0 or later
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-07-17 10:39:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Redirected to controllerlogin
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 2ms (DB: 0) | 302 Found [http://127.0.0.1/]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2009-07-17 10:39:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"login"}
+Rendering template within layouts/application
+Rendering login/index
+Completed in 24ms (View: 18, LDAP: 0, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2009-07-17 10:39:10) [POST]
+  Parameters: {"commit"=>"Login", "action"=>"login", "authenticity_token"=>"63dbcc8efaa89299b8f6fea8f1b75b0a1b7d2e34", "controller"=>"login", "login"=>{"name"=>"raoni", "password"=>"[FILTERED]"}}
+Attempting to reconnect
+  [4;36;1mLDAP: connect (0.5ms)[0m: [0;1m{:with_start_tls=>false, :uri=>"ldap://127.0.0.1:9009"}[0m
+  [4;35;1mLDAP: bind (12.0ms)[0m: [0m{:dn=>"cn=admin,dc=nodomain"}[0m
+Bound to ldap://127.0.0.1:9009 by simple as cn=admin,dc=nodomain
+  [4;35;1mLDAP: search (30.6ms)[0m: [0m{:attributes=>[], :filter=>"(&(uid=raoni)(&(objectClass=top)(objectClass=person)(objectClass=shadowAccount)(objectClass=simpleSecurityObject)))", :scope=>:sub, :base=>"ou=Users,dc=development,dc=nodomain"}[0m
+  [4;35;1mLDAP: search (5.0ms)[0m: [0m{:attributes=>["subschemaSubentry"], :filter=>"objectClass=*", :scope=>:base, :base=>""}[0m
+  [4;35;1mLDAP: search (58.7ms)[0m: [0m{:attributes=>["objectClasses", "attributeTypes", "matchingRules", "matchingRuleUse", "dITStructureRules", "dITContentRules", "nameForms", "ldapSyntaxes"], :filter=>"(objectClass=subschema)", :scope=>:base, :base=>"cn=Subschema"}[0m
+  [4;35;1mLDAP: connect (0.3ms)[0m: [0m{:with_start_tls=>false, :uri=>"ldap://127.0.0.1:9009"}[0m
+  [4;35;1mLDAP: bind (0.9ms)[0m: [0m{:dn=>"uid=raoni,ou=Users,dc=development,dc=nodomain"}[0m
+Bound to ldap://127.0.0.1:9009 by simple as uid=raoni,ou=Users,dc=development,dc=nodomain
+Redirected to /
+Completed in 284ms (DB: 0) | 302 Found [http://127.0.0.1/login/login]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-07-17 10:39:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 32ms (View: 29, LDAP: 108, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserController#index (for 127.0.0.1 at 2009-07-17 10:39:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user"}
+  [4;35;1mLDAP: search (33.8ms)[0m: [0m{:attributes=>[], :filter=>"(&(uid=*)(&(objectClass=top)(objectClass=person)(objectClass=shadowAccount)(objectClass=simpleSecurityObject)))", :scope=>:sub, :base=>"ou=Users,dc=development,dc=nodomain"}[0m
+  [4;35;1mLDAP: search (9.6ms)[0m: [0m{:attributes=>["subschemaSubentry"], :filter=>"objectClass=*", :scope=>:base, :base=>""}[0m
+  [4;35;1mLDAP: search (58.2ms)[0m: [0m{:attributes=>["objectClasses", "attributeTypes", "matchingRules", "matchingRuleUse", "dITStructureRules", "dITContentRules", "nameForms", "ldapSyntaxes"], :filter=>"(objectClass=subschema)", :scope=>:base, :base=>"cn=Subschema"}[0m
+Rendering template within layouts/application
+Rendering user/index
+Completed in 388ms (View: 82, LDAP: 102, DB: 0) | 200 OK [http://127.0.0.1/user]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-07-17 10:39:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 16ms (View: 10, LDAP: 0, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2009-07-17 10:39:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"groups"}
+  [4;35;1mLDAP: search (16.1ms)[0m: [0m{:attributes=>[], :filter=>"(&(cn=*)(&(objectClass=top)(objectClass=posixGroup)(objectClass=sggGroup)))", :scope=>:sub, :base=>"ou=Groups,dc=development,dc=nodomain"}[0m
+Rendering template within layouts/application
+Rendering groups/index
+Completed in 63ms (View: 13, LDAP: 16, DB: 0) | 200 OK [http://127.0.0.1/groups]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-07-17 10:39:19) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 19ms (View: 12, LDAP: 0, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserController#index (for 127.0.0.1 at 2009-07-17 10:39:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user"}
+  [4;35;1mLDAP: search (16.2ms)[0m: [0m{:attributes=>[], :filter=>"(&(uid=*)(&(objectClass=top)(objectClass=person)(objectClass=shadowAccount)(objectClass=simpleSecurityObject)))", :scope=>:sub, :base=>"ou=Users,dc=development,dc=nodomain"}[0m
+Rendering template within layouts/application
+Rendering user/index
+Completed in 47ms (View: 8, LDAP: 16, DB: 0) | 200 OK [http://127.0.0.1/user]
+
+
+Processing SearchController#index (for 127.0.0.1 at 2009-07-17 10:39:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"search"}
+Rendering template within layouts/application
+Rendering search/index
+Completed in 12ms (View: 9, LDAP: 0, DB: 0) | 200 OK [http://127.0.0.1/search]
+
+
+Processing SearchController#index (for 127.0.0.1 at 2009-07-17 10:39:37) [POST]
+  Parameters: {"commit"=>"Search", "action"=>"index", "authenticity_token"=>"63dbcc8efaa89299b8f6fea8f1b75b0a1b7d2e34", "controller"=>"search", "search"=>{"for"=>"Name", "keyword"=>"bli"}}
+  [4;35;1mLDAP: search (8.0ms)[0m: [0m{:attributes=>[], :filter=>"(&(cn=bli)(&(objectClass=top)(objectClass=person)(objectClass=shadowAccount)(objectClass=simpleSecurityObject)))", :scope=>:sub, :base=>"ou=Users,dc=development,dc=nodomain"}[0m
+Rendering template within layouts/application
+Rendering search/index
+Completed in 30ms (View: 7, LDAP: 8, DB: 0) | 200 OK [http://127.0.0.1/search]
+
+
+Processing SearchController#index (for 127.0.0.1 at 2009-07-17 10:39:42) [POST]
+  Parameters: {"commit"=>"Search", "action"=>"index", "authenticity_token"=>"63dbcc8efaa89299b8f6fea8f1b75b0a1b7d2e34", "controller"=>"search", "search"=>{"for"=>"Surname", "keyword"=>""}}
+Rendering template within layouts/application
+Rendering search/index
+Completed in 10ms (View: 7, LDAP: 0, DB: 0) | 200 OK [http://127.0.0.1/search]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-07-17 10:39:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 16ms (View: 10, LDAP: 0, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserController#index (for 127.0.0.1 at 2009-07-17 10:39:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user"}
+  [4;35;1mLDAP: search (16.2ms)[0m: [0m{:attributes=>[], :filter=>"(&(uid=*)(&(objectClass=top)(objectClass=person)(objectClass=shadowAccount)(objectClass=simpleSecurityObject)))", :scope=>:sub, :base=>"ou=Users,dc=development,dc=nodomain"}[0m
+Rendering template within layouts/application
+Rendering user/index
+Completed in 48ms (View: 8, LDAP: 16, DB: 0) | 200 OK [http://127.0.0.1/user]
+
+
+Processing UserController#new (for 127.0.0.1 at 2009-07-17 10:39:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user"}
+Rendering template within layouts/application
+Rendering user/new
+Completed in 36ms (View: 33, LDAP: 0, DB: 0) | 200 OK [http://127.0.0.1/user/new]
+
+
+Processing UserController#new (for 127.0.0.1 at 2009-07-17 10:40:10) [POST]
+  Parameters: {"commit"=>"Save changes", "action"=>"new", "authenticity_token"=>"63dbcc8efaa89299b8f6fea8f1b75b0a1b7d2e34", "controller"=>"user", "user"=>{"cn"=>"Morfeu", "sn"=>"bli", "uid"=>"qwer", "userPassword"=>"[FILTERED]"}}
+  [4;35;1mLDAP: search (14.2ms)[0m: [0m{:attributes=>[], :filter=>"(&(uid=qwer)(&(objectClass=top)(objectClass=person)(objectClass=shadowAccount)(objectClass=simpleSecurityObject)))", :scope=>:sub, :base=>"ou=Users,dc=development,dc=nodomain"}[0m
+  [4;35;1mLDAP: search (8.2ms)[0m: [0m{:attributes=>[], :filter=>"(&(uid=qwer)(&(objectClass=top)(objectClass=person)(objectClass=shadowAccount)(objectClass=simpleSecurityObject)))", :scope=>:sub, :base=>"ou=Users,dc=development,dc=nodomain"}[0m
+  [4;35;1mLDAP: search (5.7ms)[0m: [0m{:attributes=>[], :filter=>"(&(uid=qwer)(&(objectClass=top)(objectClass=person)(objectClass=shadowAccount)(objectClass=simpleSecurityObject)))", :scope=>:base, :base=>"uid=qwer,ou=Users,dc=development,dc=nodomain"}[0m
+Ignore error ActiveLdap::LdapError::NoSuchObject(No Such Object): filter (&(uid=qwer)(&(objectClass=top)(objectClass=person)(objectClass=shadowAccount)(objectClass=simpleSecurityObject))): attributes: []
+  [4;35;1mLDAP: add (4.4ms)[0m: [0m{:attributes=>{"cn"=>["Morfeu"], "sn"=>["bli"], "objectClass"=>["top", "person", "shadowAccount", "simpleSecurityObject"], "uid"=>["qwer"], "userPassword"=>["qwer"]}, :dn=>"uid=qwer,ou=Users,dc=development,dc=nodomain"}[0m
+Redirected to actionindex
+Completed in 103ms (DB: 0) | 302 Found [http://127.0.0.1/user/new]
+
+
+Processing UserController#index (for 127.0.0.1 at 2009-07-17 10:40:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user"}
+  [4;35;1mLDAP: search (16.0ms)[0m: [0m{:attributes=>[], :filter=>"(&(uid=*)(&(objectClass=top)(objectClass=person)(objectClass=shadowAccount)(objectClass=simpleSecurityObject)))", :scope=>:sub, :base=>"ou=Users,dc=development,dc=nodomain"}[0m
+Rendering template within layouts/application
+Rendering user/index
+Completed in 45ms (View: 7, LDAP: 48, DB: 0) | 200 OK [http://127.0.0.1/user]
+
+
+Processing SearchController#index (for 127.0.0.1 at 2009-07-17 10:40:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"search"}
+Rendering template within layouts/application
+Rendering search/index
+Completed in 11ms (View: 8, LDAP: 0, DB: 0) | 200 OK [http://127.0.0.1/search]
+
+
+Processing SearchController#index (for 127.0.0.1 at 2009-07-17 10:40:37) [POST]
+  Parameters: {"commit"=>"Search", "action"=>"index", "authenticity_token"=>"63dbcc8efaa89299b8f6fea8f1b75b0a1b7d2e34", "controller"=>"search", "search"=>{"for"=>"Surname", "keyword"=>"bli"}}
+  [4;35;1mLDAP: search (10.2ms)[0m: [0m{:attributes=>[], :filter=>"(&(sn=bli)(&(objectClass=top)(objectClass=person)(objectClass=shadowAccount)(objectClass=simpleSecurityObject)))", :scope=>:sub, :base=>"ou=Users,dc=development,dc=nodomain"}[0m
+Rendering template within layouts/application
+Rendering search/index
+Completed in 35ms (View: 7, LDAP: 10, DB: 0) | 200 OK [http://127.0.0.1/search]
+
+
+Processing SearchController#index (for 127.0.0.1 at 2009-07-17 10:40:44) [POST]
+  Parameters: {"commit"=>"Search", "action"=>"index", "authenticity_token"=>"63dbcc8efaa89299b8f6fea8f1b75b0a1b7d2e34", "controller"=>"search", "search"=>{"for"=>"Surname", "keyword"=>"bli"}}
+  [4;35;1mLDAP: search (9.3ms)[0m: [0m{:attributes=>[], :filter=>"(&(sn=bli)(&(objectClass=top)(objectClass=person)(objectClass=shadowAccount)(objectClass=simpleSecurityObject)))", :scope=>:sub, :base=>"ou=Users,dc=development,dc=nodomain"}[0m
+Rendering template within layouts/application
+Rendering search/index
+Completed in 47ms (View: 8, LDAP: 9, DB: 0) | 200 OK [http://127.0.0.1/search]
+
+
+Processing SearchController#index (for 127.0.0.1 at 2009-07-17 10:40:52) [POST]
+  Parameters: {"commit"=>"Search", "action"=>"index", "authenticity_token"=>"63dbcc8efaa89299b8f6fea8f1b75b0a1b7d2e34", "controller"=>"search", "search"=>{"for"=>"Name", "keyword"=>"Morfeu"}}
+  [4;35;1mLDAP: search (7.7ms)[0m: [0m{:attributes=>[], :filter=>"(&(cn=Morfeu)(&(objectClass=top)(objectClass=person)(objectClass=shadowAccount)(objectClass=simpleSecurityObject)))", :scope=>:sub, :base=>"ou=Users,dc=development,dc=nodomain"}[0m
+Rendering template within layouts/application
+Rendering search/index
+Completed in 31ms (View: 9, LDAP: 8, DB: 0) | 200 OK [http://127.0.0.1/search]
+
+
+Processing SearchController#index (for 127.0.0.1 at 2009-07-17 10:41:02) [POST]
+  Parameters: {"commit"=>"Search", "action"=>"index", "authenticity_token"=>"63dbcc8efaa89299b8f6fea8f1b75b0a1b7d2e34", "controller"=>"search", "search"=>{"for"=>"Name", "keyword"=>"bli"}}
+  [4;35;1mLDAP: search (7.9ms)[0m: [0m{:attributes=>[], :filter=>"(&(cn=bli)(&(objectClass=top)(objectClass=person)(objectClass=shadowAccount)(objectClass=simpleSecurityObject)))", :scope=>:sub, :base=>"ou=Users,dc=development,dc=nodomain"}[0m
+Rendering template within layouts/application
+Rendering search/index
+Completed in 31ms (View: 8, LDAP: 8, DB: 0) | 200 OK [http://127.0.0.1/search]
+
+
+Processing SearchController#index (for 127.0.0.1 at 2009-07-17 10:43:19) [POST]
+  Parameters: {"commit"=>"Search", "action"=>"index", "authenticity_token"=>"63dbcc8efaa89299b8f6fea8f1b75b0a1b7d2e34", "controller"=>"search", "search"=>{"for"=>"Name", "keyword"=>"Morfeu"}}
+  [4;35;1mLDAP: search (8.6ms)[0m: [0m{:attributes=>[], :filter=>"(&(cn=Morfeu)(&(objectClass=top)(objectClass=person)(objectClass=shadowAccount)(objectClass=simpleSecurityObject)))", :scope=>:sub, :base=>"ou=Users,dc=development,dc=nodomain"}[0m
+Rendering template within layouts/application
+Rendering search/index
+Completed in 36ms (View: 9, LDAP: 9, DB: 0) | 200 OK [http://127.0.0.1/search]
+
+
+Processing SearchController#index (for 127.0.0.1 at 2009-07-17 10:43:40) [POST]
+  Parameters: {"commit"=>"Search", "action"=>"index", "authenticity_token"=>"63dbcc8efaa89299b8f6fea8f1b75b0a1b7d2e34", "controller"=>"search", "search"=>{"for"=>"Name", "keyword"=>"Morfeu"}}
+  [4;35;1mLDAP: search (8.1ms)[0m: [0m{:attributes=>[], :filter=>"(&(cn=Morfeu)(&(objectClass=top)(objectClass=person)(objectClass=shadowAccount)(objectClass=simpleSecurityObject)))", :scope=>:sub, :base=>"ou=Users,dc=development,dc=nodomain"}[0m
+Rendering template within layouts/application
+Rendering search/index
+Completed in 33ms (View: 10, LDAP: 8, DB: 0) | 200 OK [http://127.0.0.1/search]
+
+
+Processing SearchController#index (for 127.0.0.1 at 2009-07-17 10:44:00) [POST]
+  Parameters: {"commit"=>"Search", "action"=>"index", "authenticity_token"=>"63dbcc8efaa89299b8f6fea8f1b75b0a1b7d2e34", "controller"=>"search", "search"=>{"for"=>"Surname", "keyword"=>"bli"}}
+  [4;35;1mLDAP: search (9.6ms)[0m: [0m{:attributes=>[], :filter=>"(&(sn=bli)(&(objectClass=top)(objectClass=person)(objectClass=shadowAccount)(objectClass=simpleSecurityObject)))", :scope=>:sub, :base=>"ou=Users,dc=development,dc=nodomain"}[0m
+Rendering template within layouts/application
+Rendering search/index
+Completed in 35ms (View: 9, LDAP: 10, DB: 0) | 200 OK [http://127.0.0.1/search]
+
+
+Processing SearchController#index (for 127.0.0.1 at 2009-07-17 10:45:49) [POST]
+  Parameters: {"commit"=>"Search", "action"=>"index", "authenticity_token"=>"63dbcc8efaa89299b8f6fea8f1b75b0a1b7d2e34", "controller"=>"search", "search"=>{"for"=>"Name", "keyword"=>"bli"}}
+  [4;35;1mLDAP: search (8.2ms)[0m: [0m{:attributes=>[], :filter=>"(&(cn=bli)(&(objectClass=top)(objectClass=person)(objectClass=shadowAccount)(objectClass=simpleSecurityObject)))", :scope=>:sub, :base=>"ou=Users,dc=development,dc=nodomain"}[0m
+Rendering template within layouts/application
+Rendering search/index
+Completed in 34ms (View: 8, LDAP: 8, DB: 0) | 200 OK [http://127.0.0.1/search]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-07-17 10:47:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 10ms (View: 6, LDAP: 0, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserController#index (for 127.0.0.1 at 2009-07-17 10:48:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user"}
+  [4;35;1mLDAP: search (17.2ms)[0m: [0m{:attributes=>[], :filter=>"(&(uid=*)(&(objectClass=top)(objectClass=person)(objectClass=shadowAccount)(objectClass=simpleSecurityObject)))", :scope=>:sub, :base=>"ou=Users,dc=development,dc=nodomain"}[0m
+Rendering template within layouts/application
+Rendering user/index
+Completed in 51ms (View: 7, LDAP: 17, DB: 0) | 200 OK [http://127.0.0.1/user]
