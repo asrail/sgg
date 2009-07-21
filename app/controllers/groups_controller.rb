@@ -6,13 +6,23 @@ class GroupsController < ApplicationController
   def new
     if params[:group]
       if params[:group][:cn] == ""
-    flash[:notice] = "<p>Favor preencher o campo Nome.</p>"
+        flash[:notice] = "<p>Favor preencher o campo Nome.</p>"
+      elsif params[:group][:coordinatorUid] == ""
+        flash[:notice] = "<p>Favor preencher o campo Coordenador.</p>"
       else
         if Group.find(:filter => {:cn => params[:group][:cn]})
           flash[:notice] = "<p>Já existe grupo com este nome.<br>Por favor, escolha outro.</p>"
           redirect_to :action => "new"
         end
-        @group = Group.new(params[:group])
+        @coordinator = User.find(params[:group][:coordinatorUid])
+        if @coordinator.nil?
+          flash[:notice] = "<p>Usuário coordenador não existe</p>"
+          redirect_to :action => "new"
+        end
+        par = params[:group]
+        par[:memberUid] = [par[:coordinatorUid]]
+        par[:coordinatorUid] = [par[:coordinatorUid]]
+        @group = Group.new(par)
         if @group.save
           redirect_to :action => 'index'
         else
@@ -53,7 +63,6 @@ class GroupsController < ApplicationController
     end
     redirect_to :back
   rescue TypeError
-    flash[:notice] = "<p>Erro inesperado.</p>"
     redirect_to :back
   end
 
