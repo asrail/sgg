@@ -4,7 +4,7 @@
   <div class="notice"><%= flash[:notice] %></div>
 <% end %>
 
-  <%= form_tag :action => 'login' %>
+  <% form_tag :action => 'login' do %>
   <fieldset style="width:200px;">
   <div class="form-element">
     <label for="name">Usuário</label><br/>
@@ -18,4 +18,5 @@
                 <%= submit_tag "Login" %>
         </div>
   </fieldset>
+  <% end -%>
 </div>
