@@ -14,11 +14,8 @@ class GroupsController < ApplicationController
           flash[:notice] = "<p>Já existe grupo com este nome.<br>Por favor, escolha outro.</p>"
           redirect_to :action => "new"
         end
-        @coordinator = User.find(params[:group][:coordinatorUid])
-        if @coordinator.nil?
-          flash[:notice] = "<p>Usuário coordenador não existe</p>"
-          redirect_to :action => "new"
-        end
+        User.find(params[:group][:coordinatorUid])
+        # Certificando-se que o coordenador seja membro
         par = params[:group]
         par[:memberUid] = [par[:coordinatorUid]]
         par[:coordinatorUid] = [par[:coordinatorUid]]
@@ -30,6 +27,9 @@ class GroupsController < ApplicationController
         end
       end
     end
+    rescue ActiveLdap::EntryNotFound
+      flash[:notice] = "<p>Usuário coordenador não existe</p>"
+      redirect_to :action => "new"
   end
 
   def show
