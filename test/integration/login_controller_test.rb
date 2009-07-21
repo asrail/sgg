@@ -8,13 +8,17 @@ class LoginControllerTest < ActionController::IntegrationTest
 
   # Replace this with your real tests.
     def test_logar
-	    get '/'
+            get '/'
             assert_redirected_to '/login'
 
-	    assert_tag :tag => 'form', :attributes => { :action => 'login', :method => 'post' }
+            get '/login'
+	    assert_tag :tag => 'form', :attributes => { :action => '/login/login', :method => 'post' }
 
-	    post '/login', :login => { :name => "raoni", :password => "blibli" }
+	    post '/login/login', :login => { :name => "raoni", :password => "blibli" }
 	    assert_redirected_to '/' 
     end
 
+    def teardown
+      User.destroy_all
+    end
 end
