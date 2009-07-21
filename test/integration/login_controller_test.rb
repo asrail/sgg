@@ -3,7 +3,7 @@ require 'test_helper'
 class LoginControllerTest < ActionController::IntegrationTest
 
   def setup
-    User.new({:cn => "Raoni", :sn => "Boaventura", :userPassword => "blibli", :uid => "raoni"}).save
+    User.new({:cn => "Raoni", :sn => "Boaventura", :userPassword => "blibli", :uid => "raoni2"}).save
   end
 
   # Replace this with your real tests.
@@ -14,7 +14,7 @@ class LoginControllerTest < ActionController::IntegrationTest
             get '/login'
 	    assert_tag :tag => 'form', :attributes => { :action => '/login/login', :method => 'post' }
 
-	    post '/login/login', :login => { :name => "raoni", :password => "blibli" }
+	    post '/login/login', :login => { :name => "raoni2", :password => "blibli" }
 	    assert_redirected_to '/' 
     end
 
