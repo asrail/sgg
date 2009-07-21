@@ -1,15 +1,20 @@
 <h1><%= @user.cn -%></h1>
 
 <ul>
-  <li>Nome completo: <%= @user.cn -%>
-  <li>Nome de usuário: <%= @user.uid -%>
+  <li>Nome completo: <%= @user.cn %>
+  <li>Nome de usuário: <%= @user.uid %>
   <% unless @user.telephoneNumber.nil? -%>
-  <li>Número do telefone: <%= @user.telephoneNumber -%>
+  <li>Número do telefone: <%= @user.telephoneNumber %>
   <% end -%>
 
   <% if @user.groups.size == 0 -%>
   <p>Usuário não pertence a nenhum grupo</p>
   <% else -%>
-
+  <p>Grupos aos quais o usuário pertence:</p>
+  <ul>
+    <% for group in @user.groups -%>
+    <li><%= link_to group.cn, {:controller => '/groups', :action => 'show', :id => group} %>
+    <% end -%>
+  </ul>
   <% end -%>
 </ul>
