@@ -5,14 +5,14 @@ class SearchController < ApplicationController
 		if (params[:search][:for]=="Name")
 			if params[:search][:keyword]
 				if (params[:search][:keyword]!="")
-					@users = User.find(:filter => {:cn => params[:search][:keyword]})
+					@users = User.find(:all, :filter => {:cn => "*#{params[:search][:keyword]}*"})
 				end
 			end
 		end
 		if (params[:search][:for]=="Surname")
 			if params[:search][:keyword]
 				if (params[:search][:keyword]!="")
-					@users = User.find(:filter => {:sn => params[:search][:keyword]})
+					@users = User.find(:all, :filter => {:sn => "*#{params[:search][:keyword]}*"})
 				end
 			end
 		end
