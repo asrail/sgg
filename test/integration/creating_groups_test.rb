@@ -1,31 +1,36 @@
 require 'test_helper'
 
-class CreatingGroupsTest < Test::Unit::TestCase
-  #fixtures :all
+class CreatingGroupsTest < ActionController::IntegrationTest
 
-  #test "loggin" do
-    #get '/'
-    #assert_tag :tag => 'a', :attributes => { :href => '/login' }
+  def setup
+    User.new({:cn => "Raoni", :sn => "Boaventura", :userPassword => "blibli", :uid => "raoni"}).save
+  end
 
-    #get '/login'
-    #assert_tag :tag => 'form', :attributes => { :action => 'login', :method => 'post' }
+  def test_login
+    get '/'
+    assert_redirected_to '/login'
 
-    #post '/login', :login => { :name => "raoni", :password => "blibli" }
-    #assert_redirected_to '/groups'
 
-    #get '/groups/new'
-    #assert_tag :tag => 'form', :attributes => { :action => "/groups/new", :method => 'post' }
+    get '/login'
+    assert_tag :tag => 'form', :attributes => { :action => '/login/login', :method => 'post' }
+    post '/login/login', :login => { :name => "raoni", :password => "blibli" }
+    assert_redirected_to '/'
+    get '/groups'
 
-    #post '/groups/new', :group => { :cn => "My new group", :gidNumber => 1111 }
-    #assert_redirected_to '/groups'
+    get '/groups/new'
+    assert_tag :tag => 'form', :attributes => { :action => "/groups/new", :method => 'post' }
 
-    #follow_redirect!
-    #assert_tag :content => 'My new group'
-  #end
+    post '/groups/new', :group => { :cn => "Benneton", :gidNumber => 11, :coordinatorUid => "raoni" }
+    assert_redirected_to '/groups'
+
+    follow_redirect!
+    assert_tag :content => 'Benneton'
+  end
   
 
-  #def teardown
-   # Group.destroy_all
-  #end
+  def teardown
+    Group.destroy_all
+    User.destroy_all
+  end
 
 end
