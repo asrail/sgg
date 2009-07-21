@@ -8,7 +8,7 @@ class Group < ActiveLdap::Base
       user = User.find(user)
     end
 
-    return group.coordinators.member?user
+    return self.coordinators.member?user
   end
 
   def marshal_load(str)
