@@ -8,17 +8,11 @@ class User < ActiveLdap::Base
 
   def self.authenticate(username, password)
     return false if username.empty? or password.empty?
-    find(username).authenticated?(password)
-  rescue ActiveLdap::EntryNotFound
-    return false
-  end
-
-  def authenticated?(password)
-    bind(password)
+    find(username).bind(password)
     remove_connection
-    true
-  rescue ActiveLdap::AuthenticationError, ActiveLdap::LdapError::UnwillingToPerform
-    false
+    return true
+  rescue ActiveLdap::EntryNotFound, ActiveLdap::AuthenticationError, ActiveLdap::LdapError::UnwillingToPerform
+    return false
   end
   
   def marshal_load(str)

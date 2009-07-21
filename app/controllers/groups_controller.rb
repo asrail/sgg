@@ -2,10 +2,11 @@ class GroupsController < ApplicationController
   def index
     @groups = Group.find(:all)
   end
+
   def new
     if params[:group]
       if params[:group][:cn] == ""
-	flash[:notice] = "<p>Favor preencher o campo Nome.</p>"
+    flash[:notice] = "<p>Favor preencher o campo Nome.</p>"
       else
         if Group.find(:filter => {:cn => params[:group][:cn]})
           flash[:notice] = "<p>Já existe grupo com este nome.<br>Por favor, escolha outro.</p>"
@@ -20,6 +21,7 @@ class GroupsController < ApplicationController
       end
     end
   end
+
   def show
     if params[:id]
       @group = Group.find(:filter => {:cn => params[:id]})
@@ -29,8 +31,9 @@ class GroupsController < ApplicationController
       end
     else
       redirect_to :action => "index"
-    end    
+    end
   end
+
   def add_member
     group = Group.find(params[:group])
     if params[:user]
@@ -39,9 +42,11 @@ class GroupsController < ApplicationController
         flash[:notice] = "<p>Usuário não existente.</p>"
       elsif user.groups.member?group
         flash[:notice] = "<p>Usuário já pertence ao grupo.</p>"
-      else
+      elsif group.coordinator?(User.find(session[:username]))
         group.members << [user]
         flash[:notice] = "<p>Usuário adicionado com sucesso.</p>"
+      else
+        flash[:notice] = "<p>Você não possui permissão para adicionar usuários a este grupo</p>"
       end
     else
       flash[:notice] = "<p>Por favor, informe o usuário.</p>"
@@ -51,6 +56,15 @@ class GroupsController < ApplicationController
     flash[:notice] = "<p>Erro inesperado.</p>"
     redirect_to :back
   end
+
+  def add_coordinator
+    group = Group.find(params[:group])
+    user = User.find(params[:user])
+    group.coordinators << [user]
+    flash[:notice] = "<p>Coordenador adicionado com sucesso.</p>"
+    redirect_to :back
+  end
+
   def back
     redirect_to :back
   end
